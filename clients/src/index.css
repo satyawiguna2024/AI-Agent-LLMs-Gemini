@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* ---Font Costume--- */
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url("./assets/fonts/GloriaHallelujah-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("./assets/fonts/Kalam-Regular.ttf") format("truetype");
+}
+
+
+
+@theme {
+  /* ---Font Family--- */
+  --font-ghal: "Gloria Hallelujah", sans-serif;
+  --font-kalam: "Kalam", sans-serif;
+
+  /* ---BreakPoint XS--- */
+  --breakpoint-xs: 425px;
+}
+
+/* ---Body style--- */
+body {
+  @apply bg-gray-100
+}
+
+/* hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}

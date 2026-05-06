@@ -21,7 +21,6 @@ export function usePromptHook() {
 
     let currentChatId = activeChatId;
 
-    // 🔥 auto create chat
     if (!currentChatId) {
       currentChatId = createNewChat(input.slice(0, 30));
     }
@@ -31,13 +30,11 @@ export function usePromptHook() {
       content: input
     };
 
-    // push user
     setChats(prev =>
       prev.map(chat =>
         chat.thread_id === currentChatId
           ? {
             ...chat,
-            // 🔥 update title kalau masih default
             title:
               chat.messages.length === 0
                 ? input.slice(0, 30)
